@@ -1,3 +1,6 @@
+Diseñe un programa que permita validar los datos de usuario (entero) y clave (entero) para el ingreso a un Sistema de Procesamiento de Notas (usuario = 2020; clave = 123). Si el usuario comete más de 3 errores durante la entrada de sus datos, el sistema envía el mensaje "supero el número de oportunidades, Vuelva otro día" y luego finaliza. Si el usuario logra ingresar al sistema, éste le solicita que ingrese el número de alumnos, mínimo 1, máximo 50. Luego, por cada alumno debe ingresar las notas finales (puntaje entre 1 y 10) de los cursos que han realizado en el ciclo 2019 (el ingreso de las notas del alumno termina cuando se ingresa el valor -1).
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #define usuario 2020
