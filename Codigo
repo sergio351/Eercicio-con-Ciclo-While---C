@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define usuario 2020
+#define clave 123
+int main()
+{
+    int usuario1,clave1,alumnos,cu=0,cc=0,carga=0,nota,promedio,suma=0,cmateria=0,ca=0,ok=0;
+
+    while ((cu<3)&& (ok==0))
+    {
+        printf("ingrese numero de usuario: ");
+        scanf("%d",&usuario1);
+
+        if (usuario1==usuario)
+        {
+            while ((cc<3) &&(ok==0))
+            {
+                printf("ingrese numero de clave: ");
+                scanf("%d",&clave1);
+
+                if (clave1==clave)
+                {
+                    printf("ingrese numero de alumnos: ");
+                    scanf("%d",&alumnos);
+
+
+                        if (alumnos>=1 && alumnos<=50)
+                        {
+                            while (carga<alumnos )
+                                {
+
+                                    while (nota!=-1)
+                                    {
+                                        printf("ingrese nota del alumno %d (-1 para finalizar): ",carga);
+                                        scanf("%d",&nota);
+                                        if(nota!=-1)
+                                        {
+                                                suma+=nota;
+
+                                                cmateria++;
+
+
+                                        }
+
+                                    }
+
+                                    promedio=suma/cmateria;
+                                    printf("promedio del alumno %d: %d\n",carga,promedio);
+                                    suma=0;
+                                    cmateria=0;
+                                        if (promedio>=7)
+                                        {
+                                            ca++;
+
+                                        }
+
+                                    carga++;
+                                    nota=0;
+                                    ok=1;
+                                }
+                                    printf("cantidad de aprobados: %d\n",ca);
+                        }
+                        else
+                        {
+                            printf("numero de alumnos incorrecto");
+
+                        }
+                }
+                else
+                    {
+                        cc++;
+                        printf("clave incorrecta\n");
+                    }
+
+            }
+
+
+        }
+        else
+            {
+                cu++;
+                printf("usuario incorrecto\n");
+            }
+
+    }
+
+    if ((cu>3)||(cc>3))
+    {
+        printf("se agotaron los intentos vuelva mas tarde\n");
+    }
+}
+
